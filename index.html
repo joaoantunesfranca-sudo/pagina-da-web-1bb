@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,29 +11,32 @@
             background-color: rgba(9, 1, 126, 0.884);
             color: rgb(255, 255, 255);
             text-align: center;
-            max-width:800px ;
+            max-width: 800px;
             margin: 0 auto;
         }
+
         main {
-            background-color: rgba(9, 1, 126, 0.884);
-            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.884);
+            color: rgb(0, 0, 0);
             text-align: center;
-            max-width:800px ;
+            max-width: 800px;
             margin: 0 auto;
-            display:flex ;
             text-align: center;
 
         }
+        article{ display: flex;}
 
         img {
-            width: 300px;
-            height: 300px;
+            width: 900px;
+            height: 500px;
         }
-        autor{
-             font-weight: bold;
+
+        autor {
+            font-weight: bold;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1> progetin</h1>
@@ -40,12 +44,50 @@
     </header>
 
     <main>
-        <img src="imaagen pleyer1.png" alt="imagen inicia">
-        <div>
-<p class="=autor">por: João Victor Antunes de França</p>
-<p>ola como voce vai</p>
-<p> Precisa de vidros</p>
-</div>
-    <main>
-<body>
+        <article>
+            <img src="imaagen pleyer1.png" alt="imagen inicia">
+            <div>
+                <p class="=autor">por: João Victor Antunes de França</p>
+                <p>ola como voce vai</p>
+                <p> Precisa de vidros</p>
+                <p class="=autor"> OBRIGADO!!!</p>
+                <button>✅<span>0</span><button>
+                        <button>❌<span>0</span><button></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="imaagen pleyer1.png" alt="imagen inicia">
+            <div>
+                <p class="=autor">por: João Victor Antunes de França</p>
+                <p>ola como voce vai</p>
+                <p> Precisa de vidros</p>
+                <p class="=autor"> OBRIGADO!!!</p>
+                <button>✅<span>0</span><button>
+                        <button>❌<span>0</span><button></button>
+            </div>
+        </article>
+        <main>
+
+            <body>
+                <script>
+                    const botoes = document.querySelectorAll("button");
+                    
+                    botoes.forEach(function (botao) {
+                    let curtiu = false;
+                    botao.addEventListener("click", botaoClicado);
+                    function botaoClicado() {
+                    console.log("fui clicado");
+                    let texto = botao.querySelector("span");
+                    if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                    } else {
+                    texto.textContent--;
+                    curtiu = false;
+                    }
+                    
+                    }
+                    })
+                    </script>
 </html>
